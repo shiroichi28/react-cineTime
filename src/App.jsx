@@ -1,4 +1,4 @@
-import MovieEndTimeCalculator from "./Calc"
+import MovieEndTimeCalculator from "./components/Calc";
 function App() {
 
   return (
