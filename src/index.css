@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+:root {
+  --dark: #242424;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  box-sizing: border-box;
+  appearance: none;
+  outline: none;
+  font-family: "Dancing Script", cursive;
+  border: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.App {
+  padding: 18px 40px;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--dark);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 64px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+  font-size: 1.24em;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+#clock {
+  text-align: center;
+  font-size: 1.24em;
+  margin-bottom: 0.8em;
+}
+label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  font-size: 18px;
+}
+
+input,
+#result {
+  margin-bottom: 1em;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#result {
+  margin-top: 1em;
+}
+
+.button-container {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease-in;
+}
