@@ -48,6 +48,7 @@ label {
   font-weight: 400;
   margin-bottom: 0.5em;
   font-size: 18px;
+  text-transform: capitalize;
 }
 
 input,
